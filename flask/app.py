@@ -86,7 +86,11 @@ def listar_alunos():
 @app.route('/alunos', methods=['POST'])
 def adicionar_aluno():
     data = request.get_json()
-    novo_aluno = Aluno(nome=data['nome'], sobrenome=data['sobrenome'], turma=data['turma'], disciplinas=data['disciplinas'], ra=data['ra'])
+    novo_aluno = Aluno(nome=data['nome'], 
+                       sobrenome=data['sobrenome'], 
+                       turma=data['turma'], 
+                       disciplinas=data['disciplinas'], 
+                       ra=data['ra'])
     db.session.add(novo_aluno)
     db.session.commit()
     logger.info(f"Aluno {data['nome']} {data['sobrenome']} adicionado com sucesso!")
