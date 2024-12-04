@@ -1,7 +1,7 @@
 {
   "id": null,
   "title": "Monitoramento de Requisições",
-  "uid": "prom-requests",
+  "uid": "prom-requests-dashboard",
   "timezone": "browser",
   "schemaVersion": 36,
   "version": 1,
